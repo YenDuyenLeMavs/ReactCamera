@@ -1,13 +1,5 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10350567&assignment_repo_type=AssignmentRepo)
-# DR03 Integrated Prototypes
+Used React.js to replicate a Figma prototype by Luke Sweeney https://www.figma.com/file/HKE3DfElUR0phFyWQZCP4q/Luke's-Personal-CSE-3392-Designs?node-id=0-1&t=O6R3aaQv50a3mXTn-0 
 
-## Author
-* Yen Duyen Amy Le
-* 1001827177
-* yenduyen.le@mavs.uta.edu
-* strawberry chocolate chip ice cream is my favorite
+Demo Video: https://youtu.be/_pKOO5_lYaA  
 
-* Video Submission URL: https://youtu.be/_pKOO5_lYaA 
-
-* Code includes adaptations from https://itnext.io/accessing-the-webcam-with-javascript-and-react-33cbe92f49cb and https://codingbeautydev.com/blog/react-get-mouse-position/ 
 
