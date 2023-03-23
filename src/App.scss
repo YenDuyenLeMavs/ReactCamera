@@ -1,0 +1,295 @@
+$primary-color: #eede8c;
+
+html, body, #root, .App{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  cursor: move;
+  color: black;
+  max-width: 215px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+  user-select: none;
+}
+
+#camera-viewport{
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+
+  img{
+    width: 896px;
+    aspect-ratio: 640/480;
+    overflow: hidden;
+    z-index: 100;
+  }
+  
+  #camera-feed{
+    position: absolute;
+    width: 100%;
+  }
+
+  button{
+    position: absolute;
+    left: 30%;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+  }
+
+  
+}
+
+#ui{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  canvas {
+    visibility: hidden;
+  }
+
+  #exposure-region{
+    position: absolute;
+    width: 68.5%;
+    height: 100%;
+    
+    #top-bottom{
+      position: absolute;
+      height: 100px;
+      width: 85px;
+      border-top: 2.3px solid $primary-color;
+      border-bottom: 2.3px solid $primary-color;
+      left: 100px;
+    }
+
+    #left-right{
+      position: absolute;
+      height: 85px;
+      width: 100px;
+      border-left: 2.3px solid $primary-color;
+      border-right: 2.3px solid $primary-color;
+      top: 0px;
+    }
+  }
+  #exposure-region.right {
+    right: 25.5%;
+  }
+  #exposure-region.left {
+    right: 0%;
+  }
+
+  #control-panel{
+    position: absolute;
+    height: 100%;
+    width: 25.4%;
+    background: rgba(0, 0, 0, 0.839);
+    height: 100%;
+    z-index: 3;
+  }
+  #control-panel.right{
+    right: 0%;
+  }
+  #control-panel.left{
+    right: 68.8240475%;
+  }
+
+  #side-panel{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.84);
+    border: 1px solid #000000;
+    z-index: 3;
+  }
+
+  .side-button{
+    height: 33%;
+    width: 100%;
+  }
+
+  #undo-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #second-button{
+    border-top: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+  }
+
+  #capture-ring{
+    width: 41.35%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid $primary-color;
+    background-color: transparent;
+    position: absolute;
+    top: 70%;
+  }
+  #capture-ring.right {
+    left: 6%;
+  }
+  #capture-ring.left {
+    left: 53%;
+  }
+  
+
+  #capture-button{
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: $primary-color;
+    color: $primary-color;
+    background-color: $primary-color;
+    top: 5%;
+    left: 5%;
+  }
+
+  #capture-button:active{
+    color: #d6d2bd;
+    background-color: #d6d2bd;
+  }
+
+  #review-button{
+    position: absolute;
+    overflow: hidden;
+    width: 29.54%;
+    aspect-ratio: 1;
+    border: 1px solid $primary-color;
+    border-radius: 10%;
+  }
+
+  .download-button-right{
+    top: 200px;
+    left: 60%;
+    width: 29.54%;
+  }
+
+  .download-button-left{
+    top: 200px;
+    left: 12%;
+    width: 29.54%;
+  }
+
+  .capture-preview-right{
+    visibility: visible;
+    left: 60%;
+    top: 73.3%;
+  }
+
+  .capture-preview-left{
+    visibility: visible;
+    left: 12%;
+    top: 73.3%;
+  }
+  
+  #capture-thumbnail {
+    position: absolute;
+    width: 150px;
+    aspect-ratio: 640/480;
+    left: -10px;
+    z-index: 1000;
+  }
+
+  #exposure-space{
+    position: absolute;
+    width: 92%;
+    aspect-ratio: 1/1;
+    right: 0%;
+    top: 1.75%;
+  }
+
+  #exposure-grid{
+    position: absolute;
+    width: 88.34%;
+    aspect-ratio: 1/1;
+    border: 1px solid $primary-color;
+    left: 0%;
+    bottom: 0%;
+    border-radius: 4.49%;
+    z-index: 4;
+  }
+
+  #vertical-line{
+    position: absolute;
+    border-left: 1px dashed $primary-color;
+    height: 100%;
+    left: 50%;
+  }
+
+  #horizontal-line{
+    position: absolute;
+    border-top: 1px dashed $primary-color;
+    width: 100%;
+    top: 50%;
+  }
+
+  #default-pointer{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+  }
+
+  #current-pointer{
+    position: absolute;
+    aspect-ratio: 1;
+    width: 16.3px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: $primary-color;
+    color: $primary-color;
+    background-color: $primary-color;
+    z-index: 3;
+    cursor: move;
+    user-select: none;
+  }
+
+  #aperture-icon{
+    position: absolute;
+    left: 39%;
+    top: -2%;
+  }
+
+  #FStop-icon{
+    position: absolute;
+    right: 0.5%;
+    top: 51%;
+  }
+
+  #exposure-labels{
+    display: inline-block;
+    position: absolute;
+    top: 55%;
+    left: 17.3%;
+  }
+  
+  .label-icon{
+    display: inline-block;
+  }
+
+  #aperture-label{
+    margin-left: 65px;
+  }
+
+  .exposure-value{
+    position: absolute;
+    display: inline-block;
+    font-size: 20.87px;
+    color: $primary-color;
+    font-family: "Genos";
+    top: -20px;
+  }
+}
